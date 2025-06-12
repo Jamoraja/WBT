@@ -23,3 +23,14 @@ def calculate_wbt(T, RH):
 if st.button("Calculate"):
     wbt = calculate_wbt(temp_celsius, rel_humidity)
     st.success(f"The wet bulb temperature is approximately {wbt:.1f} °C")
+
+    # Risk assessment
+    if wbt < 26:
+        st.info("WBT indicates low heat stress.")
+    elif wbt < 30:
+        st.warning("Moderate to high heat stress – stay hydrated.")
+    elif wbt < 32:
+        st.error("Dangerous conditions – avoid exertion.")
+    else:
+        st.error("Extremely dangerous! Risk of heatstroke.")
+        
