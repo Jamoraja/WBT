@@ -22,5 +22,5 @@ def calculate_wbt(T, RH):
 # Calculation and output
 if st.button("Calculate"):
     wbt = calculate_wbt(temp_celsius, rel_humidity)
-    st.success(f"The wet bulb temperature is approximately {wbt:.2f} °C")
+    st.success(f"The wet bulb temperature is approximately {wbt:.1f} °C")
   
